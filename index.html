@@ -1,45 +1,60 @@
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="css/styles.css" />
-    <script src="js/index.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Programação WEB</title>
-  </head>
-  <body>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
     <header>
         <p class="slogan">Memórias que mudam vidas.</p>
         <nav>
-            <a class="logo" href="">Sorvete de Menta</a>
-            <ul class="menu">
+            <ul class="menu-l">
+                <li><a class="logo" href="">Sorvete de Menta</a></li>
                 <li><a class="ativo" href="">Início</a></li>
                 <li><a href="">Produtos</a></li>
-                <li><a href="">Sobre</a></li>
             </ul>
-            <ul>
-                <li class="search-icon">
+            <ul class="menu-r">
+                <li class="pesquisar">
                     <input type="search" placeholder="Pesquisar">
-                    <span class="material-icons">search</span></span>
+                    <span class="material-icons">search</span>
                 </li>
-                <li><a class="login" href="">Login</a></li>
+                <li><a class="bt-login" href="">Login</a></li>
             </ul>
-            <div id="mobile-menu">
-                <span class="material-icons" onclick="toggle_mobile_menu()">menu</span>
-                <ul class="mobile-menu">
-                    <li><a href="">Início</a></li>
-                    <li><a href="">Produtos</a></li>
-                    <li><a href="">Sobre</a></li>
-                    <li><a class="login" href="">Login</a></li>
-                </ul>
+            <div class="menu-btn">
+                <div class="menu-btn-burger"></div>
             </div>
         </nav>
+        <ul class="mobile-menu">
+            <li class="pesquisar">
+                <input type="search" placeholder="Pesquisar">
+                <span class="material-icons">search</span>
+            </li>
+            <li><a href="">Início</a></li>
+            <li><a href="">Produtos</a></li>
+            <li><a class="bt-login" href="">Login</a></li>
+        </ul>
     </header>
 
-    <div class="main">
-        
-    </div>
+    <div class="inicio">
+        <div class="header"></div>
+        <div class="mensagem">
+            <p class="m1">Uma experiência diferente de tudo que você conhece até agora!</p>
+            <p class="m2">Descubra o que há de mais avançado na neurotecnologia e<br>mude de vida com poucos cliques.</p>
+            <a class="bt-cadastro" href="">Cadastre-se</a>
+        </div>
 
-  </body>
+        <div class="nossosprodutos">
+            <p>Conheça nossos produtos</p>
+            <div class="produtos">
+
+            </div>
+        </div>
+
+    </div>
+    <script src="js/index.js"></script>
+</body>
 </html>
