@@ -20,7 +20,7 @@ header {
     flex-direction: column;
     position: fixed;
     width: 100%;
-    background: rgba(0,0,0,1);
+    background: black;
 }
 .slogan {
     width: 100%;
@@ -54,7 +54,7 @@ header a:hover:not(.logo, .bt-login), .ativo {
 .logo {
     font-weight: bold;
     font-size: 25px;
-    color: #09c372;
+    color: aquamarine;
 }
 .pesquisar {
     display: flex;
@@ -65,7 +65,7 @@ header a:hover:not(.logo, .bt-login), .ativo {
     border: none;
     outline: none;
     padding: 0 10px;
-    color: #000;
+    color: black;
     font-size: 15px;
     border-radius: 25px 0 0 25px;
 }
@@ -86,8 +86,8 @@ header a:hover:not(.logo, .bt-login), .ativo {
     background: rgba(255, 255, 255, 0.75);
 }
 .bt-login {
-    color: #09c372;
-    border: 1px solid #09c372;
+    color: aquamarine;
+    border: 1px solid rgb(127, 255, 212);
     border-radius: 25px;
 }
 .menu-btn {
@@ -154,49 +154,125 @@ header a:hover:not(.logo, .bt-login), .ativo {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 100px 0;
 }
-.inicio .header {
-    width: 100%;
-    height: 86px;
-}
-.inicio .mensagem {
+.inicio .mensagem_sec {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     width: 100%;
-    height: 500px;
-    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255,255,255,0.001));
+    margin: 50px 0;
 }
-.inicio .mensagem p {
+.inicio .mensagem_sec p {
     font-family: 'Merienda', cursive;
     color: white;
     font-size: 25px;
     margin-bottom: 50px;
 }
-.inicio .mensagem .bt-cadastro {
-    color: #09c372;
-    border: 1px solid #09c372;
+.inicio .mensagem_sec .bt-cadastro {
+    color: aquamarine;
+    border: 1px solid aquamarine;
     border-radius: 25px;
     padding: 5px 10px;
     font-size: 20px;
 }
-.inicio .nossosprodutos {
-    width: 75%;
-    height: 100vh;
-    background: black;
+.inicio .produtos_sec {
     text-align: center;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 50px 0;
+    margin: 50px 0;
 }
-.inicio .nossosprodutos p {
-    margin-top: 25px;
+.inicio .produtos_sec p {
     color: white;
     font-size: 25px;
+}
+.inicio .produtos_sec .produtos {
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+}
+.inicio .produtos_sec .produto {
+    width: 300px;
+    height: 450px;
+    background-color: grey;
+    border-radius: 25px;
+    margin: 5px;
+}
+.inicio .produtos_sec .vermais {
+    color: aquamarine;
+    border: 1px solid aquamarine;
+    border-radius: 25px;
+    padding: 5px 10px;
+    font-size: 20px;
+}
+.inicio .video_sec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    margin: 50px 0;
+}
+.inicio .video_sec p {
+    color: white;
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+.inicio .depoimentos_sec {
+    text-align: center;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 50px 0;
+    margin: 50px 0;
+}
+.inicio .depoimentos_sec p {
+    color: white;
+    font-size: 25px;
+}
+.inicio .depoimentos_sec .depoimentos {
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+}
+.inicio .depoimentos_sec .depoimento {
+    width: 300px;
+    height: 450px;
+    background-color: grey;
+    border-radius: 25px;
+    margin: 5px;
+}
+.inicio .contato_sec {
+    text-align: center;
+    width: 100%;
+    height: 350px;
+}
+.inicio .contato_sec p{
+    color: white;
+    font-size: 25px;
+}
+footer{
+    text-align: center;
+    width: 100%;
+    background: black;
+    padding: 5px 0;
+}
+footer{
+    color: white;
 }
 
 @media only screen and (min-width: 950px) {
     .mobile-menu.open {
         display: none;
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+    .inicio .produtos {
+        flex-direction: column;
     }
 }
 
