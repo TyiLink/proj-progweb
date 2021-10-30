@@ -1,3 +1,3 @@
-function toggleMobileMenu() {
-    document.getElementById("hamburger-icon").classList.toggle('open');
+function toggle_mobile_menu() {
+    document.getElementById("mobile-menu").classList.toggle('open');
 }

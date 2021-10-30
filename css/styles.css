@@ -22,7 +22,7 @@ header {
     background: #1d1f1d;
 }
 
-header p {
+header .slogan {
     width: 100%;
     padding: 2.5px 0;
     text-align: center;
@@ -60,7 +60,7 @@ ul li a {
 }
 
 .ativo, .menu a:hover:not(.logo){
-    background-color: rgba(255, 255, 255, 0.55);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .search-icon{
@@ -83,8 +83,8 @@ ul li a {
 .search-icon span{
     width: 20%;
     height: 100%;
+    line-height: 125%;
     text-align: center;
-    padding: 3px;
     color: black;
     background: white;
     border-radius: 0 25px 25px 0;
@@ -104,11 +104,11 @@ ul li a {
     border-radius: 25px;
 }
 
-#hamburger-icon {
+#mobile-menu {
     display: none;
 }
 
-#hamburger-icon span {
+#mobile-menu span {
     color: white;
     font-size: 25px;
     cursor: pointer;
@@ -125,7 +125,7 @@ ul li a {
     background: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.5));
     display: none;
     position: absolute;
-    top: 86px;
+    top: 85px;
     left: 0;
     width: 100%;
     height: auto;
@@ -140,7 +140,7 @@ ul li a {
         display: none;
     }
 
-    #hamburger-icon {
+    #mobile-menu {
         display: flex;
     }
 }
@@ -150,7 +150,7 @@ ul li a {
         display: none;
     }
 
-    #hamburger-icon {
+    #mobile-menu {
         display: flex;
     }
 }
