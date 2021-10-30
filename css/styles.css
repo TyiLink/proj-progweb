@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../media/bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: #1d1f1d;
+}
+
+header p {
+    width: 100%;
+    padding: 2.5px 0;
+    text-align: center;
+    background: black;
+    color: white;
+    font-size: 15px;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 25px;
+    color: #09c372;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+ul li a {
+    color: white;
+    padding: 5px 10px;
+    margin: 0 10px;
+    font-size: 18px;
+    border-radius: 25px;
+    transition: 200ms;
+}
+
+.ativo, .menu a:hover:not(.logo){
+    background-color: rgba(255, 255, 255, 0.55);
+}
+
+.search-icon{
+    display: flex;
+    width: 200px;
+    height: 30px;
+}
+
+.search-icon input{
+    width: 80%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    color: #000;
+    font-size: 15px;
+    border-radius: 25px 0 0 25px;
+}
+
+.search-icon span{
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    padding: 3px;
+    color: black;
+    background: white;
+    border-radius: 0 25px 25px 0;
+    border-left: 1px solid rgba(0, 0, 0, 0.25);
+    font-size: 25px;
+    transition: 200ms;
+    cursor: pointer;
+}
+
+.search-icon span:hover{
+    background: rgba(255, 255, 255, 0.75);
+}
+
+.login {
+    color: #09c372;
+    border: 1px solid #09c372;
+    border-radius: 25px;
+}
+
+#hamburger-icon {
+    display: none;
+}
+
+#hamburger-icon span {
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.open .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.mobile-menu {
+    background: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.5));
+    display: none;
+    position: absolute;
+    top: 86px;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+
+.mobile-menu li {
+    padding: 10px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .menu {
+        display: none;
+    }
+
+    #hamburger-icon {
+        display: flex;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    header nav ul {
+        display: none;
+    }
+
+    #hamburger-icon {
+        display: flex;
+    }
+}
