@@ -1,0 +1,147 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&family=Orbitron&family=Saira+Condensed:wght@200;500&display=swap%27');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+body{
+    margin: 0px;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../media/bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    
+
+
+    display: flex;
+    justify-content: center;
+
+}
+
+
+.background-cards {   
+    margin-top: 200px;
+    width: 80%;
+    height: max-content;
+    border-radius: 15px;
+    background: linear-gradient(rgba(0, 0, 0, 0.418), rgba(0,0,0,0.418));
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+}
+
+.card {
+    display: grid;
+    margin: 15px;
+    width: 400px;
+    height: 500px;
+    border-radius: 15px;
+    background-color: gray}
+
+.top-card {
+    width: 100%;
+    height: 300px;
+
+    border-radius: 15px;
+}
+
+.top-card img{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    width: 100%;
+    height: 100%;
+}
+
+
+.middle-card {
+    color: white;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    font-size: 15px;
+    margin: 2px;
+}
+
+.nomeDoProduto {
+    font-size: 25px;
+    padding-top:10px;
+    width: 100%;
+    
+}
+
+.descricao {
+    font-size: medium;
+    
+    padding-top: 17px;
+}
+
+
+.bottom-card {
+    padding-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.bottom-card b {
+    font-size: 30px;
+}
+
+.bottom-card button {
+    color: aquamarine;
+    border: 1px solid aquamarine;
+    border-radius: 25px;
+    padding: 5px 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .3s;
+    
+}
+
+.valor {
+    color: aquamarine;
+
+}
+
+.comprar {
+    
+    outline: none;
+    border: 2px solid;
+    background: none;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: color 0.4s, transform 0.4s;
+    margin-bottom: 5px;
+}
+
+.comprado {
+    outline: none;
+    border: 2px solid;
+    background: pink;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: color 0.4s, transform 0.4s;
+    margin-bottom: 5px;
+}
+
+.comprar:hover {
+    background: aquamarine;
+    color: black;
+}
