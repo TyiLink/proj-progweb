@@ -9,16 +9,18 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <a href="index.html" class="menu-back">
+        <div class="menu-back-lines"></div>
+    </a>
     <div class="cadastro">
         <form action="index.html">
-            <a class="logo" href="index.html">Sorvete de Menta</a>
             <div class="input-div">
                 <span class="material-icons">person</span>
-                <input class="input" placeholder="Usuário" type="text">
+                <input class="input" placeholder="Usuário" minlength="5" maxlength="32" required type="text">
             </div>
             <div class="input-div">
                 <span class="material-icons">lock</span>
-                <input class="input" placeholder="Senha" type="password">
+                <input class="input" placeholder="Senha" minlength="5" maxlength="32" required type="password">
             </div>
             <input type="submit" class="sdm-button" value="Cadastre-se">
         </form>
