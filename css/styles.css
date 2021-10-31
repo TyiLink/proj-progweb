@@ -38,8 +38,7 @@ header {
     font-weight: bold;
     font-size: 25px;
 }
-.title {
-    font-size: 25px;
+h2 {
 }
 .sdm-button {
     color: aquamarine;
@@ -190,14 +189,14 @@ header a:hover:not(.logo, .sdm-button), .ativo {
 .menu-back-lines::after {
     transform: rotate(-45deg);
 }
-.inicio {
+.home {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 100px 0;
 }
-.inicio .mensagem_sec {
+.home .mensagem_sec {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -206,65 +205,50 @@ header a:hover:not(.logo, .sdm-button), .ativo {
     width: 100%;
     margin: 50px 0;
 }
-.inicio .mensagem_sec p {
+.home .mensagem_sec p {
     font-family: 'Amatic SC', cursive;
     font-size: 50px;
     margin-bottom: 50px;
 }
-.inicio .produtos_sec {
+.home .products-section {
     text-align: center;
     width: 100%;
-    background: rgba(255, 255, 255, 0.15);
-    padding: 50px 0;
-    margin: 50px 0;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 35px 0;
 }
-.inicio .produtos_sec .produtos {
+.home .products-container {
+    width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    padding: 50px 0;
+    padding: 30px 0;
 }
-.inicio .produtos_sec .produto {
-    width: 300px;
-    height: 450px;
-    background-color: grey;
-    border-radius: 25px;
-    margin: 5px;
-}
-.inicio .video_sec {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.home .products-card {
     text-align: center;
+    width: 320px;
+    height: 400px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+    margin: 0 25px;
+    overflow: hidden;
+    transition: all .25s;
+}
+.home .products-card:hover {
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.5);
+    transform: translateY(-15px);
+}
+.home .products-card img {
     width: 100%;
-    margin: 50px 0;
+    height: 180px;
 }
-.inicio .depoimentos_sec {
-    text-align: center;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.15);
-    padding: 50px 0;
-    margin: 50px 0;
+.home .products-card h3 {
+    color: aquamarine;
+    margin: 15px 0;
 }
-.inicio .depoimentos_sec .depoimentos {
-    display: flex;
-    justify-content: center;
-    padding: 50px 0;
-}
-.inicio .depoimentos_sec .depoimento {
-    width: 300px;
-    height: 450px;
-    background-color: grey;
-    border-radius: 25px;
-    margin: 5px;
-}
-.inicio .contato_sec {
-    text-align: center;
-    width: 100%;
-    height: 350px;
-}
-.inicio .contato_sec p{
-    font-size: 25px;
+.home .products-card p {
+    padding: 0 15px;
+    font-size: 15px;
+    font-weight: 300;
 }
 .login, .cadastro {
     display: flex;
