@@ -63,15 +63,17 @@ body {
 .menu-back-lines::after {
     transform: rotate(-45deg);
 }
-.cadastro {
+.cadastro{
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
     text-align: center;
     width: 100vw;
     height: 100vh;
 }
 form {
+    margin-top: 35vh;
+    margin-bottom: 30vh;
     width: 350px;
 }
 .input-div {
@@ -94,4 +96,11 @@ form {
     padding: 3.5px 2.5px;
     font-size: 18px;
     color: rgba(255, 255, 255, 0.5);
+}
+.cadastro p {
+    font-size: 12px;
+    opacity: 0.8;
+}
+.cadastro a {
+    color: aquamarine;
 }
