@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
- 
 
 * {
     padding: 0;
@@ -39,6 +38,10 @@ header {
     color: aquamarine;
     font-weight: bold;
     font-size: 25px;
+}
+h2 {
+	font-size: 28px;
+	font-weight: 550;
 }
 .sdm-button {
     color: aquamarine;
@@ -189,6 +192,35 @@ header a:hover:not(.logo, .sdm-button), .ativo {
 .menu-back-lines::after {
     transform: rotate(-45deg);
 }
+footer{
+    width: 100%;
+    background: black;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+footer .social-media {
+    text-align: center;
+}
+footer .social-media a i {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 20px;
+    background: aquamarine;
+    border-radius: 100%;
+    margin: 0 10px;
+    transition: .1s;
+    color: rgba(0, 0, 0, 0.75);
+}
+footer .social-media i:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 0 5px white;
+}
+footer p {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 14px;
+}
 .home {
     display: flex;
     flex-direction: column;
@@ -272,10 +304,10 @@ header a:hover:not(.logo, .sdm-button), .ativo {
     padding: 35px 0;
 }
 .home .ratings-container {
-    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    width: 100%;
 }
 .home .ratings-card {
     text-align: center;
@@ -291,38 +323,64 @@ header a:hover:not(.logo, .sdm-button), .ativo {
 .home .ratings-card p {
     padding: 10px 15px 20px 15px;
 }
-footer{
+.home .contact-section {
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     width: 100%;
-    background: black;
-    padding-top: 20px;
-    padding-bottom: 5px;
+    background: rgba(0, 0, 0, 0.35);
 }
-footer .social-media {
-    text-align: center;
+.home .contact-section h2 {
+    margin-bottom: 25px;
 }
-footer .social-media a {
-    display: inline-block;
+.home .contact-info {
+    margin: 35px 30px;
+}
+.home .contact-form {
     text-align: center;
-    width: 35px;
-    height: 35px;
-    line-height: 35px;
+    width: 550px;
+    margin: 35px 30px;
+}
+.home .contact-info h3 {
+	font-size: 20px;
+	font-weight: 550;
+	margin-bottom: 10px;
+}
+.home .contact-info h3 i {
+	text-align: center;
+	width: 35px;
+	height: 35px;
+	line-height: 35px;
     font-size: 20px;
-    background: aquamarine;
-    border-radius: 100%;
-    margin: 0 10px;
-}
-footer .social-media a:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 0 5px white;
-}
-footer .social-media a i {
+	background: aquamarine;
     color: rgba(0, 0, 0, 0.75);
+    border-radius: 100%;
+	margin-right: 5px;
 }
-footer p {
-    margin-top: 10px;
-    text-align: center;
-    font-size: 14px;
+.home .contact-info p {
+    margin-bottom: 20px;
+	font-size: 14px;
+} 
+.home .contact-input {
+	width: 100%;
+	height: 40px;
+	margin-bottom: 15px;
+	border: 1px solid white;
+    border-radius: 3px;
+	padding: 2.5px 10px;
+	font-size: 14px;
 }
+.home .contact-textarea {
+	width: 100%;
+	height: 140px;
+	border: 1px solid white;
+    border-radius: 3px;
+	padding: 10px 10px;
+    margin-bottom: 15px;
+	font-size: 14px;
+    resize: none;
+}
+
 @media only screen and (min-width: 950px) {
     .mobile-menu.open {
         display: none;
