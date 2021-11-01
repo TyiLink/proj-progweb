@@ -10,6 +10,7 @@
     background: none;
     box-sizing: border-box;
     text-decoration: none;
+    list-style: none;
     color: white;
     font-family: 'Poppins', sans-serif;
 }
@@ -54,27 +55,28 @@ header {
 }
 .search {
     display: grid;
-    grid-template-columns: 83% 17%;
+    grid-template-columns: 85% 15%;
     width: 200px;
 }
 .search input {
     background: white;
     color: black;
-    padding: 0 15px;
+    padding: 2.5px 15px;
     font-size: 16px;
     border-radius: 25px 0 0 25px;
 }
-.search span {
+.search i {
     background: white;
     color: black;
     border-left: 1px solid rgba(0, 0, 0, 0.25);
     border-radius: 0 25px 25px 0;
-    padding: 2.5px;
-    font-size: 25px;
+    line-height: 30px;
+    padding-left: 5px;
+    font-size: 15px;
     transition: .3s;
     cursor: pointer;
 }
-.search span:hover {
+.search i:hover {
     background: rgba(255, 255, 255, 0.75);
 }
 nav {
@@ -86,7 +88,6 @@ nav {
 header ul {
     display: flex;
     align-items: center;
-    list-style: none;
 }
 header ul li a {
     padding: 5px 10px;
@@ -322,10 +323,36 @@ form {
     color: rgba(255, 255, 255, 0.5);
 }
 footer{
-    text-align: center;
     width: 100%;
     background: black;
-    padding: 5px 0;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+footer .social-media {
+    text-align: center;
+}
+footer .social-media a {
+    display: inline-block;
+    text-align: center;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 20px;
+    background: aquamarine;
+    border-radius: 100%;
+    margin: 0 10px;
+}
+footer .social-media a:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 0 5px white;
+}
+footer .social-media a i {
+    color: rgba(0, 0, 0, 0.75);
+}
+footer p {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 14px;
 }
 @media only screen and (min-width: 950px) {
     .mobile-menu.open {
