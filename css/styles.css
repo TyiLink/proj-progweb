@@ -310,11 +310,6 @@ footer p {
     width: 100%;
 }
 .home .ratings-card {
-.login{
-.cadastro{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     text-align: center;
     width: 300px;
     margin: 25px;
@@ -324,13 +319,6 @@ footer p {
     height: 100px;
     border-radius: 100%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    width: 100vw;
-    height: 100vh;
-}
-form {
-    margin-top: 35vh;
-    margin-bottom: 30vh;
-    width: 350px;
 }
 .home .ratings-card p {
     padding: 10px 15px 20px 15px;
@@ -341,19 +329,6 @@ form {
     justify-content: space-evenly;
     width: 100%;
     background: rgba(0, 0, 0, 0.35);
-.input-div {
-    display: grid;
-    grid-template-columns: 10% 90%;
-    padding: 5px 0;
-    margin: 25px 0;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.85);
-}
-.input-div i {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 18px;
-    color: rgba(0, 0, 0, 0.85);
 }
 .home .contact-section h2 {
     margin-bottom: 25px;
@@ -405,7 +380,47 @@ form {
 	font-size: 14px;
     resize: none;
 }
-
+.account {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+}
+.account form {
+    margin-top: 35vh;
+    margin-bottom: 30vh;
+    width: 350px;
+}
+.account .input-div {
+    display: grid;
+    grid-template-columns: 10% 90%;
+    padding: 5px 0;
+    margin: 25px 0;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.85);
+}
+.account .input-div i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.85);
+}
+.account .input {
+    width: 95%;
+    height: 100%;
+    padding: 3.5px 2.5px;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.5);
+}
+.account p {
+    font-size: 12px;
+    opacity: 0.8;
+}
+.account a {
+    color: aquamarine;
+}
 @media only screen and (min-width: 950px) {
     .mobile-menu.open {
         display: none;
@@ -432,25 +447,4 @@ form {
     .mobile-menu .sdm-button {
         display: flex;
     }
-}
-.login p {
-    font-size: 12px;
-    opacity: 0.8;
-}
-.login a {
-    color: aquamarine;
-}
-.input {
-    width: 95%;
-    height: 100%;
-    padding: 3.5px 2.5px;
-    font-size: 18px;
-    color: rgba(255, 255, 255, 0.5);
-}
-.cadastro p {
-    font-size: 12px;
-    opacity: 0.8;
-}
-.cadastro a {
-    color: aquamarine;
 }
