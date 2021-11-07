@@ -12,21 +12,20 @@
     <a href="index.html" class="menu-back">
         <div class="menu-back-lines"></div>
     </a>
-    <div class="account">
-        <form action="index.html">
-            <div class="input-div">
-                <i class="fas fa-user"></i>
-                <input class="input" placeholder="Usuário" minlength="5" maxlength="32" required type="text">
-            </div>
-            <div class="input-div">
-                <i class="fas fa-lock"></i>
-                <input class="input" placeholder="Senha" minlength="5" maxlength="32" required type="password">
-            </div>
-            <input type="submit" class="sdm-button" value="Cadastre-se">
-        </form>
+    <form onsubmit="SignUp(); return false;">
+        <div class="input-div">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Usuário" minlength="4" maxlength="32" required>
+        </div>
+        <div class="input-div">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Senha" minlength="4" maxlength="32" required>
+        </div>
+        <input type="submit" class="sdm-button" value="Cadastrar-se">
 
-        <p>Já possui uma conta? <a href="login.html">Login</a></p>
-    </div>
-    <script src="js/index.js"></script>
+        <p class="error-msg"></p>
+        <p class="msg">Já possui uma conta? <a href="login.html">Login</a></p>
+    </form>
+    <script src="js/cadastro.js"></script>
 </body>
 </html>

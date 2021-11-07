@@ -380,45 +380,44 @@ footer p {
 	font-size: 14px;
     resize: none;
 }
-.account {
+form {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    width: 100vw;
-    height: 100vh;
+    margin-top: 30vh;
 }
-.account form {
-    margin-top: 35vh;
-    margin-bottom: 30vh;
-    width: 350px;
-}
-.account .input-div {
+form .input-div {
     display: grid;
     grid-template-columns: 10% 90%;
     padding: 5px 0;
     margin: 25px 0;
     border-bottom: 2px solid rgba(0, 0, 0, 0.85);
 }
-.account .input-div i {
+form .input-div i {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 18px;
     color: rgba(0, 0, 0, 0.85);
 }
-.account .input {
+form input[type="text"], form input[type="password"]{
     width: 95%;
     height: 100%;
     padding: 3.5px 2.5px;
     font-size: 18px;
     color: rgba(255, 255, 255, 0.5);
 }
-.account p {
+form .error-msg {
+    margin-top: 2.5vh;
+    color: rgba(255, 0, 0, 0.75);
+}
+form .msg {
+    margin-top: 30vh;
     font-size: 12px;
     opacity: 0.8;
 }
-.account a {
+form .msg a {
     color: aquamarine;
 }
 @media only screen and (min-width: 950px) {
