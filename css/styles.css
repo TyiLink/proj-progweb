@@ -18,6 +18,17 @@ body {
     background-size: cover;
     background-attachment: fixed;
 }
+
+.cart {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	padding-top: 100px;
+	width: 100%;
+
+}
+
 .sdm-button {
 	display: block;
 	text-align: center;
@@ -39,14 +50,7 @@ h2 {
 	font-size: 28px;
 	font-weight: 550;
 }
-.cart {
-	display: flex;
-	flex-direction: column;
-	text-align: center;
-	align-items: center;
-	padding-top: 100px;
-	width: 100%;
-}
+
 .cart h2 {
 	margin-bottom: 25px;
 }
