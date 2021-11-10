@@ -5,17 +5,14 @@ window.onload = function() {
     if (carrinho.length != 0) {
         criaCarrinho()
     } else {
-        document.getElementById("carrinho-vazio").innerHTML += "";   
-
         let conteudo = "";  
         conteudo += '<div class="carrinho-vazio">';
         conteudo += '<img src="media/carrinho_vazio.png">';
-        conteudo += '<h1> Seu carrinho está vazio</h1>';
+        conteudo += '<h3> Seu carrinho está vazio</h3>';
         conteudo += '</div>';
-        
         document.getElementById("carrinho-vazio").innerHTML += conteudo;   
     }
-    
+
 }
 
 function criaCarrinho() {
@@ -31,13 +28,14 @@ function criaCarrinho() {
         conteudo += '<div class="bottom">';
         conteudo += '<p>BTC ' + carrinho[i][3] + '</p>'
 
-        conteudo += '<i class="fas fa-trash" onclick="remover(' + carrinho[i][5] + ')"></i>';
-
+        conteudo += '<i class="fas fa-trash" onclick="remover(' + i + ')"></i>';
+        
         conteudo += '</div>';
         conteudo += '</div>';
         conteudo += '</div>';
         document.getElementById("carrinho-conteudo").innerHTML += conteudo;   
     }
+    
     conteudo= "";
     conteudo += '<div class="price">';
     conteudo += '<h3>Preço: </h3>';
@@ -47,14 +45,14 @@ function criaCarrinho() {
     conteudo += '<h3>Produtos:</h3>';
     conteudo += '<h4 >' + carrinho.length + '</h4>';
     conteudo += '</div>';
-    conteudo += '<a href="" class="sdm-button">Finalizar Compra</a>';
+    conteudo += '<a href="" class="sdm-button">Confirmar</a>';
+
     document.getElementById("checkout").innerHTML += conteudo;
-    console.log(carrinho)
+    
 }
 
 function remover(i) {
-    var indice = carrinho.indexOf(i)
-    carrinho.splice(indice, 1) 
+    carrinho.splice(i, 1) 
     window.localStorage.setItem("carrinho", JSON.stringify(carrinho));
     console.log(carrinho)
     location.reload()

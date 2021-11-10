@@ -22,9 +22,10 @@ body {
 
 
 .carrinho-vazio img {
-	margin-bottom: 50px;
-	width: 50%;
-	height: 50%;
+	margin-bottom: 25px;
+	width: 150px;
+	height: 150px;
+	opacity: 75%;
 }
 
 .cart {
@@ -82,6 +83,7 @@ h2 {
 }
 .cart .checkout {
 	height: max-content;
+	min-height: 200px;
 	width: 25%;
 	background: rgba(0,0,0,0.5);
 	border-radius: 25px;
@@ -133,6 +135,8 @@ h2 {
 	height: 125px;
 	color: aquamarine;
 }
+
+
 .cart .products-info .bottom{
 	display: flex;
 	justify-content: space-evenly;
