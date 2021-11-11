@@ -6,7 +6,7 @@ function SignUp() {
     if (username.value in localStorage) {
         error_msg.textContent = "Usuário já existente."
     } else {
-        window.localStorage.setItem(username.value, password.value)
-        error_msg.textContent = ""
+        localStorage.setItem(username.value, password.value)
+        window.location.href = "index.html"
     }
 }
