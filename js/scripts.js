@@ -19,6 +19,14 @@ function isLoggedIn() {
     }
 }
 
+function isSearch() {
+    if ('search' in sessionStorage) {
+        return true
+    } else {
+        return false
+    }
+}
+
 function isCartEmpty() {
     if (isLoggedIn()) {
         if (`.${user}` in localStorage) {
@@ -43,8 +51,8 @@ if (activePage != 'login.html' && activePage != 'signup.html') {
     header += '</ul>'
     header += '<ul class="menu-r">'
     header += '<li class="search">'
-    header += '<input type="search" placeholder="Pesquisar">'
-    header += '<i class="fas fa-search"></i></li>'
+    header += '<input class="search-input" type="search" placeholder="Pesquisar">'
+    header += '<i onclick="search()" class="fas fa-search"></i></li>'
     if (isLoggedIn()) {
         header += '<li><i class="fas fa-shopping-cart" id="header-cart" onclick="cartRedirect()"></i></li>'
         header += '<li><a href="" onclick="logout()" class="logout-button">Logout</a></li>'
@@ -57,8 +65,8 @@ if (activePage != 'login.html' && activePage != 'signup.html') {
     header += '</nav>'
     header += '<ul class="mobile-menu">'
     header += '<li class="search">'
-    header += '<input type="search" placeholder="Pesquisar">'
-    header += '<i class="fas fa-search"></i>'
+    header += '<input class="search-input" type="search" placeholder="Pesquisar">'
+    header += '<i onclick="search()" class="fas fa-search"></i>'
     header += '</li>'
     header += `<li><a ${isHomePage() ? "href='index.html'" : "href='../index.html'"}>Início</a></li>`
     header += `<li><a ${isHomePage() ? "href='pages/products.html'" : "href='products.html'"}>Produtos</a></li>`
@@ -159,6 +167,27 @@ var products = [
 [10, 'h.png', 'SUA WAIFU EXISTE', 'Você, jovem garoto, seus sonhos se tornaram realidade >.<', 4.75, false],
 [11, 'faroeste.jpg', 'Western memories', 'Viva o Velho Oeste dos Estados Unidos do século XIX', 5.5, false]]
 
+function search() {
+    let search_content = document.querySelector('.search-input').value.toLowerCase()
+    let foundList = []
+    
+    for (i = 0; i < products.length; i++) {
+        if (products[i][2].toLowerCase().includes(search_content)) {
+            foundList.push(products[i][0])
+        }
+        if (products[i][3].toLowerCase().includes(search_content)) {
+            foundList.push(products[i][0])
+        }
+    }
+    sessionStorage.setItem('search', foundList)
+
+    if (isHomePage()) {
+        window.location.href = "pages/products.html"
+    } else {
+        window.location.href = "products.html"
+    }
+}
+
 if (activePage == 'products.html') {
     let cart = []
     if (!isCartEmpty()) {
@@ -167,21 +196,43 @@ if (activePage == 'products.html') {
             products[cart[i][0]][5] = true
         }
     }
-    let content = ""
-    for (i = 0; i < products.length; i++) {
-        content += '<div class="products-card">'
-        content += '<img src="../media/' + products[i][1] + '">'
-        content += '<h3>' + products[i][2] + '</h3>'
-        content += '<p>' + products[i][3] + '</p>'
-        content += '<b>BTC ' + products[i][4] + '</b>'
-        if (products[i][5] == false) {
-            content += '<button class="sdm-button" onclick="buy(' + products[i][0] + ')">Comprar</button>'
-        } else {
-            content += '<button class="oncart">No carrinho</button>'
+    if (isSearch()) {
+        let searched = sessionStorage.getItem('search');
+        let content = ""
+        for (i = 0; i < products.length; i++) {
+            if (searched.includes(i)) {
+                content += '<div class="products-card">'
+                content += '<img src="../media/' + products[i][1] + '">'
+                content += '<h3>' + products[i][2] + '</h3>'
+                content += '<p>' + products[i][3] + '</p>'
+                content += '<b>BTC ' + products[i][4] + '</b>'
+                if (products[i][5] == false) {
+                    content += '<button class="sdm-button" onclick="buy(' + products[i][0] + ')">Comprar</button>'
+                } else {
+                    content += '<button class="oncart">No carrinho</button>'
+                }
+                content += '</div>'
+            }  
         }
-        content += '</div>'
+        document.querySelector(".products-container").innerHTML += content
+        sessionStorage.removeItem('search')
+    } else {
+        let content = ""
+        for (i = 0; i < products.length; i++) {
+            content += '<div class="products-card">'
+            content += '<img src="../media/' + products[i][1] + '">'
+            content += '<h3>' + products[i][2] + '</h3>'
+            content += '<p>' + products[i][3] + '</p>'
+            content += '<b>BTC ' + products[i][4] + '</b>'
+            if (products[i][5] == false) {
+                content += '<button class="sdm-button" onclick="buy(' + products[i][0] + ')">Comprar</button>'
+            } else {
+                content += '<button class="oncart">No carrinho</button>'
+            }
+            content += '</div>'
+        }
+        document.querySelector(".products-container").innerHTML += content
     }
-    document.querySelector(".products-container").innerHTML += content
 
     function buy(i) {
         if (isLoggedIn()) {
