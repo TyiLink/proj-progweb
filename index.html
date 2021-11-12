@@ -2,39 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Programação WEB</title>
     <script src="https://kit.fontawesome.com/bb3c20f391.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/styles.css">
+    <title>Sorvete de Menta</title>
 </head>
 <body>
     <div class="home">
         <div class="mensagem_section">
             <p>Uma experiência diferente de tudo que você conhece até agora!</p>
-
-            <a class="sdm-button" href="cadastro.html">CADASTRE-SE</a>
+            <a class="sdm-button" href="pages/signup.html">CADASTRE-SE</a>
         </div>
-        <div class="products-section">
+        <div class="services-section">
             <h2>NOSSOS SERVIÇOS</h2>
-            <div class="products-container">
-                <div class="products-card">
+            <div class="services-container">
+                <div class="services-card">
                     <img src="media/products.jpg">
                     <h3>Conhecimento</h3>
                     <p>A forma mais rápida e eficiente de adquirir um conhecimento novo, desde coisas simples até as mais complexas possíveis.</p>
                 </div>
-                <div class="products-card">
+                <div class="services-card">
                     <img src="media/products.jpg">
                     <h3>Momentos Únicos</h3>
                     <p>Viva momentos que você jamais sonhou. Uma viagem inesquecivel, uma tarde com uma pessoa inalcançável ou sequer real. Aqui sua imaginação é o limite!</p>
                 </div>
-                <div class="products-card">
+                <div class="services-card">
                     <img src="media/products.jpg">
                     <h3>Ctrl + Z</h3>
                     <p>Desfazer agora é uma ferramenta da vida real, livre-se de traumas, vícios, momentos constrangedores ou simplesmente uma memória desagradável.</p>
                 </div>
             </div>
-            <a href="#" class="sdm-button">VEJA NOSSOS PRODUTOS</a>
+            <a href="pages/products.html" class="sdm-button">VEJA NOSSOS PRODUTOS</a>
         </div>
         <div class="video-section">
             <h2>SOBRE NOSSO TRABALHO</h2>
@@ -75,15 +72,15 @@
 			</div>
             <form class="contact-form">
 			    <h2>FALE CONOSCO</h2>
-                <input type="text" placeholder="Nome Completo" class="contact-input">
-                <input type="text" placeholder="E-mail" class="contact-input">
-                <input type="text" placeholder="Assunto" class="contact-input">
+                <input type="text" placeholder="Nome Completo" maxlength="64" class="contact-input">
+                <input type="text" placeholder="E-mail" maxlength="64" class="contact-input">
+                <input type="text" placeholder="Assunto" maxlength="64" class="contact-input">
                 <textarea placeholder="Mensagem" class="contact-textarea"></textarea>
                 <input type="submit" value="Enviar" class="sdm-button">
             </form>
 			</div>
 		</div>
     </div>
-    <script src="js/main.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>

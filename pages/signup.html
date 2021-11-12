@@ -2,20 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Programação WEB</title>
     <script src="https://kit.fontawesome.com/bb3c20f391.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Cadastro</title>
 </head>
 <body>
-    <a href="index.html" class="menu-back">
+    <div class="menu-back" onclick="window.history.go(-1)">
         <div class="menu-back-lines"></div>
-    </a>
-    <form class="account" onsubmit="SignUp(); return false;">
+    </div>
+    <form class="account" onsubmit="signUp(); return false;">
         <div class="input-div">
             <i class="fas fa-user"></i>
-            <input type="text" placeholder="Usuário" minlength="4" maxlength="16" required>
+            <input type="text" placeholder="Usuário" minlength="4" maxlength="16" pattern="[A-Za-z0-9]+" required>
         </div>
         <div class="input-div">
             <i class="fas fa-lock"></i>
@@ -26,6 +24,6 @@
         <p class="error-msg"></p>
         <p class="msg">Já possui uma conta? <a href="login.html">Login</a></p>
     </form>
-    <script src="js/cadastro.js"></script>
+    <script src="../js/scripts.js"></script>
 </body>
 </html>
